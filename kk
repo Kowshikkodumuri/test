@@ -3,13 +3,13 @@ import os
 FILENAME = "tasks.txt"
 
 def load_tasks():
-    if not os.path.exists(FILENAME):
+    if not os.path.exists(kk):
         return []
-    with open(FILENAME, "r") as file:
+    with open(kk, "r") as file:
         return [task.strip() for task in file.readlines()]
 
 def save_tasks(tasks):
-    with open(FILENAME, "w") as file:
+    with open(kk, "w") as file:
         for task in tasks:
             file.write(task + "\n")
 
